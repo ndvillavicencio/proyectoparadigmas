@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
+import kaggle.api.kaggle_api_extended 
 import os
 import zipfile
-from kaggle.api.kaggle_api_extended import KaggleApi
+#from kaggle.api.kaggle_api_extended import KaggleApi
 import toml
 
 # Cargar credenciales de Kaggle
@@ -14,8 +15,8 @@ else:
     os.environ['KAGGLE_USERNAME'] = config['kaggle']['username']
     os.environ['KAGGLE_KEY'] = config['kaggle']['key']
 
-from kaggle.api.kaggle_api_extended import KaggleApi
-api = KaggleApi()
+
+api = kaggle.api.kaggle_api_extended.KaggleApi()
 api.authenticate()
 
 # Función para descargar datasets de Kaggle
