@@ -14,6 +14,7 @@ else:
     os.environ['KAGGLE_USERNAME'] = config['kaggle']['username']
     os.environ['KAGGLE_KEY'] = config['kaggle']['key']
 
+from kaggle.api.kaggle_api_extended import KaggleApi
 api = KaggleApi()
 api.authenticate()
 
