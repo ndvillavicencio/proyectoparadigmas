@@ -1,3 +1,4 @@
 streamlit
-kaggle==1.5.12
+kaggle
 pandas
+toml
