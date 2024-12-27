@@ -5,22 +5,17 @@ import zipfile
 from kaggle.api.kaggle_api_extended import KaggleApi
 import toml
 
+# Cargar credenciales de Kaggle
+if 'KAGGLE_USERNAME' in st.secrets:
+    os.environ['KAGGLE_USERNAME'] = st.secrets["KAGGLE_USERNAME"]
+    os.environ['KAGGLE_KEY'] = st.secrets["KAGGLE_KEY"]
+else:
+    config = toml.load("config.toml")
+    os.environ['KAGGLE_USERNAME'] = config['kaggle']['username']
+    os.environ['KAGGLE_KEY'] = config['kaggle']['key']
 
-# Acceder a las credenciales desde secrets 
-kaggle_username = st.secrets["KAGGLE_USERNAME"] 
-kaggle_key = st.secrets["KAGGLE_KEY"] 
-# Configurar las variables de entorno para Kaggle 
-os.environ["KAGGLE_USERNAME"] = kaggle_username 
-os.environ["KAGGLE_KEY"] = kaggle_key 
-# Crear una instancia de la API de Kaggle y autenticarla 
-api = KaggleApi() 
-api.authenticate() 
-# Ahora puedes usar la API de Kaggle 
-datasets = api.dataset_list() 
-st.write(datasets)
-
-
-
+api = KaggleApi()
+api.authenticate()
 
 # Función para descargar datasets de Kaggle
 def download_dataset(dataset, file_name):
@@ -80,3 +75,4 @@ if 'df' in locals():
 st.header('4. Modelado Predictivo')
 if 'df' in locals():
     st.write('Modelos predictivos aquí...')
+    
