@@ -6,21 +6,21 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 import toml
 
 # Cargar credenciales de Kaggle
-# if 'KAGGLE_USERNAME' in st.secrets:
-#     os.environ['KAGGLE_USERNAME'] = st.secrets["KAGGLE_USERNAME"]
-#     os.environ['KAGGLE_KEY'] = st.secrets["KAGGLE_KEY"]
-# else:
-#     config = toml.load("config.toml")
-#     os.environ['KAGGLE_USERNAME'] = config['kaggle']['username']
-#     os.environ['KAGGLE_KEY'] = config['kaggle']['key']
-
-if 'kaggle_username' in st.secrets:
-    os.environ['kaggle_username'] = st.secrets["kaggle_username"]
-    os.environ['kaggle_key'] = st.secrets["kaggle_key"]
+if 'KAGGLE_USERNAME' in st.secrets:
+    os.environ['KAGGLE_USERNAME'] = st.secrets["KAGGLE_USERNAME"]
+    os.environ['KAGGLE_KEY'] = st.secrets["KAGGLE_KEY"]
 else:
     config = toml.load("config.toml")
-    os.environ['kaggle_username'] = config['kaggle']['username']
-    os.environ['kaggle_key'] = config['kaggle']['key']
+    os.environ['KAGGLE_USERNAME'] = config['kaggle']['username']
+    os.environ['KAGGLE_KEY'] = config['kaggle']['key']
+
+# if 'kaggle_username' in st.secrets:
+#     os.environ['kaggle_username'] = st.secrets["kaggle_username"]
+#     os.environ['kaggle_key'] = st.secrets["kaggle_key"]
+# else:
+#     config = toml.load("config.toml")
+#     os.environ['kaggle_username'] = config['kaggle']['username']
+#     os.environ['kaggle_key'] = config['kaggle']['key']
 
 
 
