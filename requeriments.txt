@@ -3,4 +3,5 @@ pandas
 os
 zipfile
 kaggle
+KaggleApi
 from kaggle.api.kaggle_api_extended import KaggleApi
