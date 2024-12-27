@@ -1,4 +1,5 @@
+pandas>=2.2.3
+kaggle>=1.6.17
+kagglehub>=0.3.6
+toml>=0.10.2
 streamlit
-kaggle
-pandas
-toml
