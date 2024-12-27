@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import zipfile
-from kaggle.api.kaggle_api_extended import KaggleApi
+#from kaggle.api.kaggle_api_extended import KaggleApi
 import toml
 
 # Cargar credenciales de Kaggle
