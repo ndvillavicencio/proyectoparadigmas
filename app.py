@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import zipfile
-import kaggle
+import kaggle.api
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 # Configurar API de Kaggle usando secretos de Streamlit
