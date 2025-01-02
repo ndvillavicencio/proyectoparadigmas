@@ -1,7 +1,7 @@
 pandas>=2.2.3
 zipfile
 os
-plotly.express
+plotly
 matplotlib.pyplot
 seaborn
 streamlit.components.v1
