@@ -1,9 +1,7 @@
-pandas>=2.2.3
-zipfile
-os
-plotly
-matplotlib.pyplot
-seaborn
-streamlit.components.v1
-sklearn.impute
 streamlit
+pandas
+numpy
+plotly
+matplotlib
+seaborn
+scikit-learn
